@@ -1,7 +1,7 @@
 //! The Cipher key manager.
 use std::collections::HashSet;
 
-use oasis_core_keymanager::policy::TrustedPolicySigners;
+use oasis_core_keymanager::policy::TrustedSigners;
 use oasis_core_runtime::consensus::verifier::TrustRoot;
 
 /// Determine whether the build is for Testnet.
@@ -14,10 +14,10 @@ const fn is_testnet() -> bool {
 }
 
 /// Trusted key manager policy signer set.
-pub fn trusted_policy_signers() -> TrustedPolicySigners {
+pub fn trusted_policy_signers() -> TrustedSigners {
     if is_testnet() {
         // Testnet.
-        TrustedPolicySigners {
+        TrustedSigners {
             signers: HashSet::from([
                 "b27b3d0245d4cbd78be8e04e473f36abee350fcfbc438000313db1bb06117a43".into(),
                 "c37cbd0345965fda84fbaa372a01fc840b7b66eebfeb66dfdd35bb3e801f2cf3".into(),

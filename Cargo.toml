@@ -1,6 +1,6 @@
 [package]
 name = "pontusx-keymanager"
-version = "0.0.1-testnet"
+version = "0.0.2-testnet"
 authors = ["deltaDAO <contact@delta-dao.com>"]
 edition = "2021"
 license = "Apache-2.0"
@@ -13,11 +13,11 @@ runtime-id = "400000000000000000000000000000000000000000000000bda9cfedb46428e5"
 runtime-id = "400000000000000000000000000000000000000000000000c0fb685b92338f68"
 
 [package.metadata.fortanix-sgx]
-heap-size = 268435456 # 256 MiB
+heap-size = 536870912 # 512 MiB
 stack-size = 2097152
-threads = 8
+threads = 26
 debug = false
 
 [dependencies]
-oasis-core-runtime = { git = "https://github.com/oasisprotocol/oasis-core", tag = "v23.0.1" }
-oasis-core-keymanager = { git = "https://github.com/oasisprotocol/oasis-core", tag = "v23.0.1" }
+oasis-core-runtime = { git = "https://github.com/oasisprotocol/oasis-core", tag = "v24.0" }
+oasis-core-keymanager = { git = "https://github.com/oasisprotocol/oasis-core", tag = "v24.0" }
